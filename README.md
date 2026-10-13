@@ -33,3 +33,7 @@ npm run build && npm run e2e  # tests Playwright : parcours, SEO, accessibilité
 - `.claude/hooks/check.sh` : l'agent ne peut pas terminer si lint ou tests unitaires échouent.
 - `docs/adr/` : décisions d'architecture.
 - Dans une issue ou une PR, écris `@claude <demande>` : Claude implémente sur une branche dans GitHub Actions.
+
+## Versioning
+
+Automatique avec release-please (`docs/adr/0004-versioning-automatique.md`) : les commits `feat:` / `fix:` / `content:` alimentent une PR de release. La merger crée le tag `vX.Y.Z`, la Release GitHub et met à jour `CHANGELOG.md`.

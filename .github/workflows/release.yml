@@ -1,0 +1,22 @@
+name: Release
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+jobs:
+  release-please:
+    runs-on: ubuntu-latest
+    steps:
+      # Ouvre/met à jour la PR de release à partir des commits (Conventional Commits).
+      # Au merge de cette PR : tag vX.Y.Z + Release GitHub + CHANGELOG.md.
+      - uses: googleapis/release-please-action@v5
+        with:
+          # PAT plutôt que GITHUB_TOKEN : sinon la CI ne tourne pas sur la PR de release
+          # et le check obligatoire `web` la bloque.
+          token: ${{ secrets.RELEASE_PLEASE_TOKEN }}
