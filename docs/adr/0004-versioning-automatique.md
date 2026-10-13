@@ -10,7 +10,7 @@ Les commits suivent déjà Conventional Commits. `main` est protégée : pas de 
 
 [release-please](https://github.com/googleapis/release-please-action) (`.github/workflows/release.yml`) :
 
-1. À chaque push sur `main`, il ouvre ou met à jour une **PR de release** : nouvelle version, `CHANGELOG.md`, `version.txt`, `version` de `web/package.json`.
+1. À chaque push sur `main`, il ouvre ou met à jour une **PR de release** : nouvelle version dans `.release-please-manifest.json` et `web/package.json`, `CHANGELOG.md`.
 2. Quand on merge cette PR, il crée le tag `vX.Y.Z` et la Release GitHub.
 
 | Commit | Avant 1.0.0 | Après 1.0.0 |
