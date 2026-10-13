@@ -61,5 +61,12 @@ export async function getArticles(): Promise<Article[]> {
   const bad = slugs.find((s) => !SLUG.test(s));
   if (bad) throw new Error(`Nom de fichier invalide "${bad}.md" (attendu : minuscules, chiffres, tirets)`);
   const articles = await Promise.all(slugs.map((s) => getArticle(s)));
-  return (articles as Article[]).sort((a, b) => b.date.localeCompare(a.date));
+  return articles
+    .filter((a): a is Article => a !== null)
+    .sort((a, b) => b.date.localeCompare(a.date));
+}
+
+// "2026-10-01" est lu en UTC : on formate en UTC pour ne pas reculer d'un jour selon le fuseau du serveur
+export function formatDate(date: string): string {
+  return new Date(date).toLocaleDateString("fr-FR", { dateStyle: "long", timeZone: "UTC" });
 }

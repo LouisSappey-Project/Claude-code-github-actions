@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "test": "node --experimental-strip-types --no-warnings --test 'src/**/*.test.mjs'"
+    "test": "node --experimental-strip-types --no-warnings --test 'src/**/*.test.mjs'",
+    "e2e": "playwright test"
   },
   "dependencies": {
     "marked": "^18.1.1",
@@ -16,6 +17,8 @@
     "react-dom": "19.3.0"
   },
   "devDependencies": {
+    "@axe-core/playwright": "^4.13.0",
+    "@playwright/test": "^1.64.0",
     "@tailwindcss/turbopack": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
