@@ -11,13 +11,18 @@ Site média (conseils pour automobilistes) servant de terrain d'entraînement à
 
 ## Définition de « terminé »
 
-Une tâche n'est terminée que si, depuis `web/`, tout passe :
+Une tâche n'est terminée que si ces quatre commandes passent, lancées une par une depuis `web/` :
 
 ```bash
-npm run lint && npm test && npm run build && npm run e2e
+npm run lint
+npm test
+npm run build
+npm run e2e
 ```
 
 Un hook `Stop` relance `lint` et `test` automatiquement : s'il échoue, corrige avant de rendre la main.
+
+Lance chaque commande seule (une par appel, sans `&&`, `;` ni `|`) : une commande composée est refusée en entier si une seule de ses parties n'est pas autorisée. Crée et modifie les fichiers avec tes outils d'édition, pas avec `cat >` ou `sed`.
 
 ## Règles
 
