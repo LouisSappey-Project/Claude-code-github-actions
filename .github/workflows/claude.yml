@@ -44,5 +44,9 @@ jobs:
       # Affiche seulement les commandes refusées à Claude (pas tout son journal), pour ajuster --allowed-tools
       - name: Commandes refusées
         if: always() && steps.claude.outputs.execution_file
+        continue-on-error: true # simple diagnostic : ne doit pas faire échouer le job
+        env:
+          EXEC_FILE: ${{ steps.claude.outputs.execution_file }}
+        # tronqué à 200 caractères : les logs sont publics
         run: |
-          jq -r '.[] | select(.type == "result") | .permission_denials[]? | "\(.tool_name): \(.tool_input.command // .tool_input | tostring)"' "${{ steps.claude.outputs.execution_file }}"
+          jq -r '.[] | select(.type == "result") | .permission_denials[]? | "\(.tool_name): \((.tool_input.command // .tool_input) | tostring)"' "$EXEC_FILE" | cut -c1-200
