@@ -12,7 +12,7 @@ Ils sont ton seul contact avec la route. Contrôle la pression à froid, en suiv
 
 ## Les niveaux
 
-Voiture à l'arrêt sur un sol plat, vérifie le niveau d'huile avec la jauge, puis le liquide de refroidissement, le lave-glace et le liquide de frein. Chaque réservoir porte un repère minimum et maximum. S'il manque du liquide de frein, ne complète pas au hasard : fais contrôler le circuit par un garagiste.
+Voiture à l'arrêt sur un sol plat, moteur éteint depuis quelques minutes, vérifie le niveau d'huile avec la jauge. Contrôle le liquide de refroidissement uniquement moteur froid : le circuit est sous pression quand il est chaud. Passe ensuite au lave-glace et au liquide de frein. Chaque réservoir porte un repère minimum et maximum. S'il manque du liquide de frein, ne complète pas au hasard : fais contrôler le circuit par un garagiste.
 
 ## La visibilité et les freins
 
@@ -20,4 +20,4 @@ Allume les feux (croisement, route, clignotants, stop) et demande à quelqu'un d
 
 ## À bord
 
-Garde à portée de main tes papiers et ton attestation d'assurance, ainsi que l'équipement de sécurité de ton véhicule. Place les bagages lourds au plus bas et sans gêner la visibilité.
+Garde à portée de main ta carte grise et ton permis de conduire, que tu devras présenter en cas de contrôle, ainsi que ton attestation d'assurance, utile en cas de sinistre. Vérifie aussi que le gilet de sécurité et le triangle de signalisation sont bien dans le véhicule. Place les bagages lourds au plus bas et sans gêner la visibilité.
