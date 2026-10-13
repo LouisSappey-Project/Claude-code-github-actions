@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { SITE_URL } from "@/lib/site";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: { default: "Le Média Auto", template: "%s | Le Média Auto" },
   description: "Conseils et actualités pour les automobilistes.",
 };

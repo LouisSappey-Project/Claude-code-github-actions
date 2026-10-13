@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { getArticles } from "@/lib/articles";
+import { formatDate, getArticles } from "@/lib/articles";
 
 export default async function Home() {
   const articles = await getArticles();
@@ -14,7 +14,7 @@ export default async function Home() {
             </Link>
             <p className="text-zinc-600 dark:text-zinc-400">{a.description}</p>
             <time dateTime={a.date} className="text-sm text-zinc-500">
-              {new Date(a.date).toLocaleDateString("fr-FR", { dateStyle: "long" })}
+              {formatDate(a.date)}
             </time>
           </li>
         ))}

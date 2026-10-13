@@ -17,3 +17,11 @@ cd web
 npm install
 npm run dev   # http://localhost:3000
 ```
+
+Vérifications (lancées aussi par la CI sur chaque PR) :
+
+```bash
+npm run lint
+npm test                      # tests unitaires (node:test)
+npm run build && npm run e2e  # tests Playwright : parcours, SEO, accessibilité
+```
