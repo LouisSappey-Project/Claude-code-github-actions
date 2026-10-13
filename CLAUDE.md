@@ -24,6 +24,7 @@ Un hook `Stop` relance `lint` et `test` automatiquement : s'il échoue, corrige 
 - Une PR = un sujet. Titre au format Conventional Commits (`feat(web): ...`, `fix(web): ...`, `content: ...` pour un article).
 - Toute nouvelle page ou comportement visible a un test Playwright dans `web/e2e/`.
 - Ne jamais pousser sur `main` : tout passe par une PR (la branche est protégée).
+- Dans GitHub Actions (`@claude`), quand la tâche est terminée, ouvre la PR toi-même avec `gh pr create`, avec `Closes #<numéro de l'issue>` dans la description.
 - Ne pas ajouter de dépendance sans le justifier dans la description de la PR.
 - Code et commentaires : identifiants en anglais, commentaires et textes du site en français.
 - En cas de doute sur un choix produit (contenu, design, URL publique), demande plutôt que de deviner.
