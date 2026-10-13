@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.0](https://github.com/LouisSappey-Project/Claude-code-github-actions/compare/v0.2.0...v0.3.0) (2026-10-13)
+
+
+### Nouveautés
+
+* **web:** add Sentry error monitoring and tracing ([d697773](https://github.com/LouisSappey-Project/Claude-code-github-actions/commit/d697773ee6d10d54645f8e06d08e7bd609ca3044))
+
 ## [0.2.0](https://github.com/LouisSappey-Project/Claude-code-github-actions/compare/v0.1.0...v0.2.0) (2026-10-13)
 
 
