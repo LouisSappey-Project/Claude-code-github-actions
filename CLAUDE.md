@@ -27,7 +27,7 @@ Lance chaque commande seule (une par appel, sans `&&`, `;` ni `|`) : une command
 ## Règles
 
 - Une PR = un sujet. **Chaque commit** au format Conventional Commits (`feat(web): ...`, `fix(web): ...`, `content: ...` pour un article) : les PR sont mergées en rebase, donc ce sont les commits qui alimentent le versioning.
-- Versioning automatique (release-please, voir `docs/adr/0004`) : `feat` → version mineure, `fix`/`content` → patch, `!` ou `BREAKING CHANGE:` → majeure. Ne modifie jamais `CHANGELOG.md`, `.release-please-manifest.json` ni le champ `version` de `web/package.json` à la main.
+- Versioning automatique (release-please) : `feat` → mineure, `fix`/`content`/`perf` → patch, `!` → majeure, `docs`/`ci`/`test`/`chore` → aucun effet. Tableau complet dans `docs/adr/0004-versioning-automatique.md`. Ne modifie jamais `CHANGELOG.md`, `.release-please-manifest.json` ni le champ `version` de `web/package.json` à la main.
 - Toute nouvelle page ou comportement visible a un test Playwright dans `web/e2e/`.
 - Ne jamais pousser sur `main` : tout passe par une PR (la branche est protégée).
 - Dans GitHub Actions (`@claude`), quand la tâche est terminée, ouvre la PR toi-même avec `gh pr create`, avec `Closes #<numéro de l'issue>` dans la description.
