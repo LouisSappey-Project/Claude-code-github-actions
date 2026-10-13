@@ -26,3 +26,5 @@ body {
 /* contenu Markdown des articles */
 .prose h2 { @apply mt-8 mb-2 text-xl font-semibold; }
 .prose p { @apply mb-4 leading-7; }
+.prose ul { @apply mb-4 list-disc pl-6; }
+.prose ol { @apply mb-4 list-decimal pl-6; }
