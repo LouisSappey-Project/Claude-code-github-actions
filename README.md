@@ -25,3 +25,11 @@ npm run lint
 npm test                      # tests unitaires (node:test)
 npm run build && npm run e2e  # tests Playwright : parcours, SEO, accessibilité
 ```
+
+## Travailler avec un agent
+
+- `CLAUDE.md` (racine et `web/`) : conventions et définition de « terminé », lues par Claude Code.
+- `.claude/skills/` : procédures `new-article` et `new-page`.
+- `.claude/hooks/check.sh` : l'agent ne peut pas terminer si lint ou tests unitaires échouent.
+- `docs/adr/` : décisions d'architecture.
+- Dans une issue ou une PR, écris `@claude <demande>` : Claude implémente sur une branche dans GitHub Actions.
